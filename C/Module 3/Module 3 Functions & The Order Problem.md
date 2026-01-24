@@ -54,3 +54,22 @@ Let's build a program that uses a separate function to do a calculation.
 **Important Hint:** Remember to place your `calculateArea` function **above** the `main` function so the compiler sees it first!
 
 **Let's see your implementation.**
+
+
+
+### 🛑 Practice Challenge #6 (Temperature Converter)
+
+Now that you've mastered the return function and fixed the `scanf` bug, let's try a conversion tool.
+
+**The Problem:**
+
+1. Create a function `toFahrenheit` that takes a `float celsius` and returns the converted value.
+> **Formula:** 
+
+
+2. In `main`, ask the user for the temperature in Celsius.
+3. Call the function and print the result.
+
+**Bonus Tip:** Since `9/5` involves integers, C might do "integer division" and give you `1` instead of `1.8`. To fix this, write it as `(celsius * 9.0 / 5.0) + 32.0`.
+
+**Let's see if you can nail the `scanf` syntax this time!**
