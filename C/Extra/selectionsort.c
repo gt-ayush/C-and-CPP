@@ -1,13 +1,21 @@
 #include <stdio.h>
 
 void main () {
-    int l= 5;
-    int n[] = {1,10,60,50,0};
+    int l;
+    printf("Enter the length of the array : ");
+    scanf("%d",&l);
+
+    int n[l];
+
+    for (int i = 0 ; i < l ; i++) {
+        printf("Enter the number : ");
+        scanf("%d",&n[i]);
+    }
 
     for (int i = 0 ; i < l-1 ; i ++) {
 
         for (int j = i+1 ; j<l;j++) {
-            if (n[i]>n[j]){
+            if (n[i]<n[j]){
                 n[i] ^= n[j];
                 n[j] ^= n[i];
                 n[i] ^= n[j];
@@ -18,4 +26,5 @@ void main () {
         printf("%d | ",n[i]);
     }
 
+    
 }
