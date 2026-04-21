@@ -18,6 +18,15 @@ Up until now, we've used "Stack" memory (automatic). But if you want to create a
 int *arr = malloc(5 * sizeof(int)); 
 
 ```
+#### 2.1 `calloc`
+
+```c
+#include <stdlib.h> // Required for malloc/free
+
+// Create an array of 5 integers on the heap
+int *arr = calloc(5 , sizeof(int)); 
+
+```
 
 #### 3. `free`
 

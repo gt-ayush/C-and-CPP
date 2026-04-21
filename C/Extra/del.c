@@ -23,10 +23,10 @@
     for (int i = 0 ; i < l ; i++) {
         if (n[i] == del) {
             for (int j = i; j < l - 1; j++) {
-                n[j] = n[j + 1]; // Shift elements to the left
+                n[j] = n[j + 1]; 
             }
-            l--; // Decrease the size of the array
-            break; // Exit the loop after deleting the element
+            l--; 
+            break; 
         }
     }
     for (int i =0 ; i < l ; i++) {
