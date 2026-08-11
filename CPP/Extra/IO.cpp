@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
-//no paraneter with return value
-int greatest(){
-    int a,b,c;
-    cin>>a>>b>>c;
+//parameter with no return value
+void greatest(int a, int b, int c){
     if(a>b && a>c)
-        return a;
+        cout<<a;
     else if(b>a && b>c)
-        return b;
+        cout<<b;
     else
-        return c;
+        cout<<c;
 }
 int main(){
-    int a=greatest();
-    cout<<a;
+    int a,b,c;
+    cin>>a>>b>>c;
+    greatest(a,b,c);
 }
+
