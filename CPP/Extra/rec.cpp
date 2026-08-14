@@ -1,24 +1,44 @@
 //mentain a record of one student using a class which has int roll,char name,double marks.
 
 #include <iostream>
+#include <cstring>
 #include <stdio.h>
 using namespace std;
 
 class student{
+    private:
+        int Roll_no;
+        char Name[20];
+        double Marks;
     public:
-    int Roll_no;
-    char Name[20];
-    double Marks;
+        void setRoll_no(int r){
+            Roll_no = r;
+        }
+        void setName(char n[]){
+            strcpy(Name, n);
+        }
+        void setMarks(double m){
+            Marks = m;
+        }
+        void get(){
+            cout<<"Roll No. : "<<Roll_no<<endl;
+            cout<<"Name : "<<Name<<endl;
+            cout<<"Marks : "<<Marks<<endl;
+        }
 };
 
 int main(void){
     student Ayush;
     cout<<"Enter Roll No., Name and Marks of the student: "<<endl;
-    cin>>Ayush.Roll_no;
-    cin>>Ayush.Name;
-    cin>>Ayush.Marks;
-    printf("Name: %s\n", Ayush.Name);
-    printf("Roll No. : %d\n", Ayush.Roll_no);
-    printf("Marks : %.2f\n", Ayush.Marks);
+    int roll;
+    char name[20];
+    double marks;
+    cin>>roll;
+    cin>>name;
+    cin>>marks;
+    Ayush.setRoll_no(roll);
+    Ayush.setName(name);
+    Ayush.setMarks(marks);
+    Ayush.get();
     return 0;
 }
