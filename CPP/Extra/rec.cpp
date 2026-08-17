@@ -4,7 +4,7 @@
 #include <cstring>
 using namespace std;
 
-class student{
+union student{
     private:
         int Roll_no;
         char Name[20];
