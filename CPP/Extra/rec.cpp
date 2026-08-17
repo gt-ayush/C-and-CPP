@@ -46,7 +46,7 @@ for(int i=0; i<no; i++){
     cout<<"Student Records: "<<endl;
     for(int i=0; i<no; i++){
         s[i].get();
-        cout<<sizeof(s[i])<<endl;
+        cout<<"Size of student record: "<<sizeof(s[i])<<endl;
     }
     return 0;
 }
