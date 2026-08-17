@@ -47,12 +47,14 @@ for(int i=0; i<no; i++){
         cin>>name;
         cin>>marks;
         s[i].setRoll_no(roll);
+        cout<<"Roll No. : "<<roll<<endl;
         s[i].setName(name);
+        cout<<"Name : "<<name<<endl;
         s[i].setMarks(marks);
+        cout<<"Marks : "<<marks<<endl;
     }
-    cout<<"Student Records: "<<endl;
+    
     for(int i=0; i<no; i++){
-        s[i].get();
         cout<<"Size of student record: "<<sizeof(s[i])<<endl;
     }
     return 0;
