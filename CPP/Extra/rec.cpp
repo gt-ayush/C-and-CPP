@@ -10,21 +10,28 @@ class student{
         char Name[20];
         double Marks;
     public:
-        void setRoll_no(int r){
-            Roll_no = r;
-        }
-        void setName(char n[]){
-            strcpy(Name, n);
-        }
-        void setMarks(double m){
-            Marks = m;
-        }
-        void get(){
-            cout<<"Roll No. : "<<Roll_no<<endl;
-            cout<<"Name : "<<Name<<endl;
-            cout<<"Marks : "<<Marks<<endl;
-        }
+        void setRoll_no(int r);
+        void setName(char n[]);
+        void setMarks(double m);
+        void get();
+        
 };
+            void student::setRoll_no(int r){
+                Roll_no = r;
+            }
+            void student::setName(char n[]){
+                strcpy(Name, n);
+            }
+            void student::setMarks(double m){
+                Marks = m;
+            }
+            void student::get(){
+                cout<<"Roll No. : "<<Roll_no<<endl;
+                cout<<"Name : "<<Name<<endl;
+                cout<<"Marks : "<<Marks<<endl;
+            }
+
+
 
 int main(void){
     int no;
