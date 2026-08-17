@@ -32,7 +32,7 @@ int main(void){
     cin>>no;
     student s[no];
     cout<<"Enter Roll No., Name and Marks of each student: "<<endl;
-    for(int i=0; i<no; i++){
+for(int i=0; i<no; i++){
         int roll;
         char name[20];
         double marks;
