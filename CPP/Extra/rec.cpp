@@ -27,17 +27,25 @@ class student{
 };
 
 int main(void){
-    student Ayush;
-    cout<<"Enter Roll No., Name and Marks of the student: "<<endl;
-    int roll;
-    char name[20];
-    double marks;
-    cin>>roll;
-    cin>>name;
-    cin>>marks;
-    Ayush.setRoll_no(roll);
-    Ayush.setName(name);
-    Ayush.setMarks(marks);
-    Ayush.get();
+    int no;
+    cout<<"Enter the number of students: ";
+    cin>>no;
+    student s[no];
+    cout<<"Enter Roll No., Name and Marks of each student: "<<endl;
+    for(int i=0; i<no; i++){
+        int roll;
+        char name[20];
+        double marks;
+        cin>>roll;
+        cin>>name;
+        cin>>marks;
+        s[i].setRoll_no(roll);
+        s[i].setName(name);
+        s[i].setMarks(marks);
+    }
+    cout<<"Student Records: "<<endl;
+    for(int i=0; i<no; i++){
+        s[i].get();
+    }
     return 0;
 }
