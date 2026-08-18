@@ -8,8 +8,10 @@ int main(){
         cout<<"Enter the Element : ";
         cin>>arr[i];
     }
+    int index;
+    cin>>index;
     //---
-    for (int i=1;i<5;i++){
+    for (int i=index;i<5;i++){
         arr[i-1]=arr[i];
     }
     //---
