@@ -52,7 +52,7 @@ int main() {
         cout << "Element not found using linear search." << endl;
     } else {
         cout << "Element found at index (linear search): " << linear_index << endl;
-    }
+    } 
 
     return 0;
 }   
