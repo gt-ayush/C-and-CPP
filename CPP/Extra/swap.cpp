@@ -12,7 +12,9 @@ void swap(int &a, int &b) //pass by reference
 
 int main()
 {
-    int x = 10, y = 20;
+    int x, y;
+    cout << "Enter two numbers: ";
+    cin >> x >> y;
     cout << "Before swapping: x = " << x << ", y = " << y << endl;
     swap(x, y);
     cout << "After swapping: x = " << x << ", y = " << y << endl;
