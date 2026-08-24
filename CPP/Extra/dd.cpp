@@ -7,7 +7,7 @@ int main(){
     cin>>n>>m;
     int arr[n] [m];
     int i=0,j=0;
-    while(i<=n){
+    while(i<=n){ 
         cin>>arr[i][j];
         if(j<=m)
         {j++;}
