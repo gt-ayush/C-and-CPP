@@ -13,20 +13,18 @@ int main() {
     }
     for(int i = 0 ; i <m;i++){
         cin>>arr2[i];
-    }
+    } 
 
     int arr3[n+m];
 
-    for(int i = 0 ; i<n;i++){
-        arr3[i]=arr1[i];
+    int min = (n < m) ? n : m;
+    for(int i=0,j=0;i,j<min;){
+        if(arr1[i] < arr2[j]){
+            arr3[i+j] = arr1[i];
+            i++;
+        } else {
+            arr3[i+j] = arr2[j];
+            j++;
+        }
     }
-
-    for(int i = 0 ; i < m;i++){
-        arr3[i+n]=arr2[i];
-    }
-
-    for(int i = 0 ; i < n+m;i++){
-        cout<<arr3[i]<<" ";
-    }
-
 }
