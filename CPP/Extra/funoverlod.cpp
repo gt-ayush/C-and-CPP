@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 //function overloading
-int area(int){
+int area(int a){
     return a * a;
 }
-int area(int,int){
+int area(int x, int y){
     return x * y;
 }
-double area(double,double){
+double area(double c1, double c2){
     return 3.14 * c1 * c2;
 }
 int main() {
