@@ -6,11 +6,14 @@ int main(){
     cout<<"Enter the number of rows and columns : ";
     cin>>n>>m;
     int arr[n] [m];
-    for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
-            cout<<"Enter the Element : ";
-            cin>>arr[i][j];
-        }
+    int i=0,j=0;
+    while(i<=n){
+        cin>>arr[i][j];
+        if(j<=m)
+        {j++;}
+        if(j>m)
+        {j=0;i++;}
+
     }
     for (int i=0;i<n;i++){
         for(int j=0;j<m;j++){
