@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//both orignal arr are sorted in ascending order
 int main() {
     int n,m;
     cout<<"Enter the length of first the arr:";
@@ -28,5 +28,11 @@ int main() {
             arr3[i+j] = arr2[j];
             j++;
         }
+    }
+    for(int i=min;i<n+m;i++){
+        if(min == n)
+        arr3[i]= arr2[i];
+        else
+        arr3[i]= arr1[i];
     }
 }
