@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 //function overloading
+int area(int a);
+int area(int x, int y);
+double area(double c1, double c2);
+void area(float a, float b, float c);
 
 int main() {
     int a;
