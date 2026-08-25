@@ -1,18 +1,7 @@
 #include <iostream>
 using namespace std;
 //function overloading
-int area(int a){
-    return a * a;
-}
-int area(int x, int y){
-    return x * y;
-}
-double area(double c1, double c2){
-    return 3.14 * c1 * c2;
-}
-void area(float a, float b, float c){
-    cout<<"Area of triangle: "<<(a*b)/2<<endl;
-}
+
 int main() {
     int a;
     cout<<"Enter an integer: ";
@@ -36,4 +25,17 @@ int main() {
     area(z, v, g);
 
     return 0;
+}
+
+int area(int a){
+    return a * a;
+}
+int area(int x, int y){
+    return x * y;
+}
+double area(double c1, double c2){
+    return 3.14 * c1 * c2;
+}
+void area(float a, float b, float c){
+    cout<<"Area of triangle: "<<(a*b)/2<<endl;
 }
