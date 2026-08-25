@@ -21,7 +21,7 @@ int main() {
     for(int i = 0 ; i <m;i++){
         cin>>arr2[i];
     } 
-
+    cout<<"Trying to sort ....."<<endl;
     vector<int> arr3(n + m);
     int i = 0;
     int j = 0;
@@ -45,7 +45,7 @@ int main() {
     while (j < m) {
         arr3[k++] = arr2[j++];
     }
-
+    cout<<"Done ..."<<endl;
     cout << "Merged array: ";
     for (int value : arr3) {
         cout << value << ' ';
