@@ -3,13 +3,13 @@ using namespace std;
 //testing friend keyword
 
 class fri {
-
+    friend void display(fri f);
     int a;
     public:
         fri(int x){
             a = x;
         }
-        friend void display(fri f);
+        
 };
 void display(fri f){
     cout<<"The value of a is: "<<f.a<<endl;
