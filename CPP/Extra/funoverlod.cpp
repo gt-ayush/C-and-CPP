@@ -4,8 +4,8 @@ using namespace std;
 int area(int a){
     return a * a;
 }
-int area(int &x){
-    return x ;
+int area(int x, int y=0){
+    return x * y;
 }
 double area(double c1, double c2){
     return 3.14 * c1 * c2;
