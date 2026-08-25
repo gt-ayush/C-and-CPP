@@ -1,38 +1,54 @@
 #include <iostream>
+#include <vector>
 using namespace std;
-//both orignal arr are sorted in ascending order
+
+// Both original arrays are sorted in ascending order.
 int main() {
     int n,m;
-    cout<<"Enter the length of first the arr:";
+    cout << "Enter the length of first array: ";
     cin>>n;
-    
-    int arr1[n],arr2[m];
+
+    vector<int> arr1(n);
 
     for(int i = 0 ; i <n;i++){
         cin>>arr1[i];
     }
-    cout<<"Enter the length of second arr:";
+
+    cout << "Enter the length of second array: ";
     cin>>m;
+
+    vector<int> arr2(m);
     for(int i = 0 ; i <m;i++){
         cin>>arr2[i];
     } 
 
-    int arr3[n+m];
+    vector<int> arr3(n + m);
+    int i = 0;
+    int j = 0;
+    int k = 0;
 
-    int min = (n < m) ? n : m;
-    for(int i=0,j=0;i,j<min;){
-        if(arr1[i] < arr2[j]){
-            arr3[i+j] = arr1[i];
+    while (i < n && j < m) {
+        if(arr1[i] <= arr2[j]){
+            arr3[k] = arr1[i];
             i++;
         } else {
-            arr3[i+j] = arr2[j];
+            arr3[k] = arr2[j];
             j++;
         }
+        k++;
     }
-    for(int i=min;i<n+m;i++){
-        if(min == n)
-        arr3[i]= arr2[i];
-        else
-        arr3[i]= arr1[i];
+
+    while (i < n) {
+        arr3[k++] = arr1[i++];
     }
+
+    while (j < m) {
+        arr3[k++] = arr2[j++];
+    }
+
+    cout << "Merged array: ";
+    for (int value : arr3) {
+        cout << value << ' ';
+    }
+    cout << '\n';
 }
