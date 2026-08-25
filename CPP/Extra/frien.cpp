@@ -2,7 +2,7 @@
 using namespace std;
 //testing friend keyword
 
-class fri(){
+class fri {
 
     int a;
     public:
