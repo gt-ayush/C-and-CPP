@@ -4,7 +4,7 @@ using namespace std;
 int area(int a){
     return a * a;
 }
-int area(int x, int y=0){
+int area(int x, int y){
     return x * y;
 }
 double area(double c1, double c2){
