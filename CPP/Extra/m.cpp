@@ -3,14 +3,16 @@ using namespace std;
 
 int main() {
     int n,m;
-    cout<<"Enter the length of both the arr:";
-    cin>>n>>m;
+    cout<<"Enter the length of first the arr:";
+    cin>>n;
     
     int arr1[n],arr2[m];
 
     for(int i = 0 ; i <n;i++){
         cin>>arr1[i];
     }
+    cout<<"Enter the length of second arr:";
+    cin>>m;
     for(int i = 0 ; i <m;i++){
         cin>>arr2[i];
     } 
