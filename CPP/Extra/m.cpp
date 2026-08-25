@@ -28,10 +28,17 @@ int main() {
     int k = 0;
 
     while (i < n && j < m) {
-        if(arr1[i] <= arr2[j]){
+        if(arr1[i] == arr2[j]){
             arr3[k] = arr1[i];
             i++;
-        } else {
+            j++;
+        }
+        else
+        if(arr1[i] < arr2[j]){
+            arr3[k] = arr1[i];
+            i++;
+        }
+        else {
             arr3[k] = arr2[j];
             j++;
         }
