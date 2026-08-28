@@ -4,12 +4,11 @@ using namespace std;
 //use multiple friend functions to single class
 //one common friend function for two  class
 //menber function of one class can be friend of another class
-
+class fri2; //forward declaration of class fri2
 class fri {
     friend void display(fri f);
     friend void update(fri &f, int x);
     friend void print(const fri &f);
-    friend void fri2::getB (const fri2 &f2);
     int a;
     public:
         fri(int x){
@@ -24,8 +23,6 @@ class fri2 {
     friend void display(fri2 f2);
     friend void update(fri2 &f2, int x);
     friend void print(const fri2 &f2);
-    friend void fri::getA (const fri &f);
-    friend void fri2::getB (const fri2 &f2);    
     int b;
     public:
         fri2(int y){
