@@ -15,11 +15,11 @@ class fri {
         }
         
 };
-
+//different value of a and b in different class
 class fri2 {
-    friend void display(fri f);
-    friend void update(fri &f, int x);
-    friend void print(const fri &f);
+    friend void display(fri2 f2);
+    friend void update(fri2 &f2, int x);
+    friend void print(const fri2 &f2);
     int b;
     public:
         fri2(int y){
@@ -42,6 +42,7 @@ void print(const fri &f){
 
 int main(){
     fri f1(10);
+    fri2 f2(30);
     display(f1);
     update(f1, 20);
     display(f1);
