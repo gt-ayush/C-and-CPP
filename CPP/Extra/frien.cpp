@@ -33,9 +33,18 @@ class fri2 {
         }
         
 };
-
+void fri::getA() const {
+    return a;
+}
+void fri2::getB() const {
+    return b;
+}   
 void display(fri f){
     cout<<"The value of a is: "<<f.a<<endl;
+}
+
+void display(fri2 f2){
+    cout<<"The value of b is: "<<f2.b<<endl;
 }
 
 void update(fri &f, int x){
