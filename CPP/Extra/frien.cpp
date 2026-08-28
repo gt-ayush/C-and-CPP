@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 //testing friend keyword
-
-//use 3 friend functions to access private members of a class
+//use multiple friend functions to single class
+//one common friend function for two class
 
 class fri {
     friend void display(fri f);
