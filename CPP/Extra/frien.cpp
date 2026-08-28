@@ -3,7 +3,7 @@ using namespace std;
 //testing friend keyword
 //use multiple friend functions to single class
 //one common friend function for two  class
-//any member function of one class can be friend of another class
+//any member function of one class can use menber function of another class
 class fri2; //forward declaration of class fri2
 class fri {
     friend void display(fri f);
