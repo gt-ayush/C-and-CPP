@@ -14,9 +14,7 @@ class fri {
         fri(int x){
             a = x;
         }
-        int getA() const {
-            return a;
-        }
+        int getA() const;
 };
 //different value of a and b in different class
 class fri2 {
@@ -28,15 +26,13 @@ class fri2 {
         fri2(int y){
             b = y;
         }
-        int getB() const {
-            return b;
-        }
+        int getB() const;
         
 };
-void fri::getA() const {
+int fri::getA() const {
     return a;
 }
-void fri2::getB() const {
+int fri2::getB() const {
     return b;
 }   
 void display(fri f){
@@ -58,7 +54,9 @@ void print(const fri &f){
 int main(){
     fri f1(10);
     fri2 f2(30);
+    
     display(f1);
+    display(f2);        
     update(f1, 20);
     display(f1);
     print(f1);
