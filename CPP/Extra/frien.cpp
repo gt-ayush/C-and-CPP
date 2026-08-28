@@ -3,27 +3,36 @@ using namespace std;
 //testing friend keyword
 //use multiple friend functions to single class
 //one common friend function for two  class
+//menber function of one class can be friend of another class
 
 class fri {
     friend void display(fri f);
     friend void update(fri &f, int x);
     friend void print(const fri &f);
+    friend void fri2::getB (const fri2 &f2);
     int a;
     public:
         fri(int x){
             a = x;
         }
-        
+        int getA() const {
+            return a;
+        }
 };
 //different value of a and b in different class
 class fri2 {
     friend void display(fri2 f2);
     friend void update(fri2 &f2, int x);
     friend void print(const fri2 &f2);
+    friend void fri::getA (const fri &f);
+    friend void fri2::getB (const fri2 &f2);    
     int b;
     public:
         fri2(int y){
             b = y;
+        }
+        int getB() const {
+            return b;
         }
         
 };
