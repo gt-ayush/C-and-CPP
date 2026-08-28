@@ -2,7 +2,7 @@
 using namespace std;
 //testing friend keyword
 //use multiple friend functions to single class
-//one common friend function for two class
+//one common friend function for two  class
 
 class fri {
     friend void display(fri f);
@@ -12,6 +12,18 @@ class fri {
     public:
         fri(int x){
             a = x;
+        }
+        
+};
+
+class fri2 {
+    friend void display(fri f);
+    friend void update(fri &f, int x);
+    friend void print(const fri &f);
+    int b;
+    public:
+        fri2(int y){
+            b = y;
         }
         
 };
