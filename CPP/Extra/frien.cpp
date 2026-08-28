@@ -49,3 +49,6 @@ int main(){
     print(f1);
     return 0;
 }
+
+//what is the use when we use friend function in class?
+//friend function is used to access private and protected members of a class from outside the class. It allows functions that are not members of the class to access its private data. This can be useful for operator overloading, implementing certain algorithms, or when you want to allow specific functions to have special access to the class's internals without making those members public.
