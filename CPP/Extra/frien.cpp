@@ -2,8 +2,11 @@
 using namespace std;
 //testing friend keyword
 
+//use 2 friend functions to access private members of a class
+
 class fri {
     friend void display(fri f);
+    friend void update(fri &f, int x);
     int a;
     public:
         fri(int x){
@@ -11,11 +14,19 @@ class fri {
         }
         
 };
+
 void display(fri f){
     cout<<"The value of a is: "<<f.a<<endl;
 }
+
+void update(fri &f, int x){
+    f.a = x;
+}
+
 int main(){
     fri f1(10);
+    display(f1);
+    update(f1, 20);
     display(f1);
     return 0;
 }
