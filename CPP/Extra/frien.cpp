@@ -9,6 +9,7 @@ class fri {
     friend void display(fri f);
     friend void update(fri &f, int x);
     friend void print(const fri &f);
+    friend int getB(const fri2 &f2); //friend function of class fri2
     int a;
     public:
         fri(int x){
@@ -21,6 +22,7 @@ class fri2 {
     friend void display(fri2 f2);
     friend void update(fri2 &f2, int x);
     friend void print(const fri2 &f2);
+    friend int getA(const fri &f); //friend function of class fri
     int b;
     public:
         fri2(int y){
@@ -34,7 +36,13 @@ int fri::getA() const {
 }
 int fri2::getB() const {
     return b;
-}   
+}
+int getA(const fri &f) {
+    return f.a;
+}
+int getB(const fri2 &f2) {
+    return f2.b;
+}
 void display(fri f){
     cout<<"The value of a is: "<<f.a<<endl;
 }
@@ -54,7 +62,6 @@ void print(const fri &f){
 int main(){
     fri f1(10);
     fri2 f2(30);
-    
     display(f1);
     display(f2);        
     update(f1, 20);
