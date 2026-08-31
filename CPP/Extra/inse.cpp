@@ -12,7 +12,7 @@ int insersort(vector<int> &a,int n){
         }
         a[j+1]=g; 
     }
-
+    return 0;
 }
 
 
