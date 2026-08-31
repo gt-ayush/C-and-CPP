@@ -4,6 +4,11 @@ class B;
 class A{
     int a,b;
     friend class B;
+    public:
+    void getdata(int m, int n){
+        a=m;
+        b=n;
+    }
 };
 
 class B{
@@ -17,15 +22,14 @@ class B{
         cout<<"a="<<o.a<<endl;
         cout<<"b="<<o.b<<endl;
     }
+
 };
 
 int main()
 {
     A a;
     B b;
-    b.setdata(10, 20, a);
+    a.getdata(10, 20);
     b.showdata(a);
-    cout<<"a="<<a.a<<endl; // This line will cause a compilation error because 'a' is private in class A and not accessible here.
-    cout<<"b="<<a.b<<endl; // This line will also cause a compilation error for the same reason.
     return 0;
 }
