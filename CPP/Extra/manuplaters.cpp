@@ -14,5 +14,6 @@ int main () {
     float b=10.538481;
     cout<<"The value of b is: "<<setprecision(2)<<b<<endl;
     cout<<"The value of b is: "<<fixed<<setprecision(2)<<b<<endl;
+    cout<<"The value of b is: "<<scientific<<setprecision(2)<<b<<endl;
     return 0;
 }
