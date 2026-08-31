@@ -13,6 +13,7 @@ class A{
 
 class B{
     int x=9,y=90;
+    A &o;
     public:
     void setdata(int m,int n,A &o){
         o.a=m;
@@ -24,7 +25,7 @@ class B{
     }
     //function without the class object as a parameter
     void area(){
-        cout<<"Area of rectangle is: "<<x*y<<endl;
+        cout<<"Area of rectangle is: "<<x*y<<o.a*o.b<<endl;//gives error because o is not initialized and cannot be used to access members of class A without an object reference.
     }
     
 };
