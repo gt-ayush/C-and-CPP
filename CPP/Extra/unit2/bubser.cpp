@@ -4,7 +4,9 @@ using namespace std;
 int main() {
     int arr[5] = {5, 4, 3, 2, 1};
     int n = 5;
-
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
     // Bubble Sort
     for (int i = 0; i < n-1; i++) {
         for (int j = 0; j < n-i-1; j++) {
@@ -16,8 +18,8 @@ int main() {
         }
     }
 
-    // Print sorted array
-    for (int i = 0; i < n; i++) {
+    cout << "Sorted array is: ";
+    for (int i = 0; i < n; i++) {   
         cout << arr[i] << " ";
     }
     cout << endl;
