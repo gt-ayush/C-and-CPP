@@ -10,5 +10,7 @@ int main() {
     }
     cout << endl;
 
+    arr[5]=7; // This line will cause undefined behavior since it is accessing out of bounds of the array.
+
     return 0;
 }
