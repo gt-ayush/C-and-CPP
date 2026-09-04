@@ -58,5 +58,7 @@ int main() {
             smallest = arr[i];
         }
     }
+    cout << "Smallest element is: " << smallest << endl;
+    cout << endl;
     return 0;
 }
