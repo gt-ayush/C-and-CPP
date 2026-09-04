@@ -11,15 +11,15 @@ int main() {
     int low = 0;
     int high = 4;
     while (low <= high) {
-        int min = low + (high - low) / 2;
-        if (arr[min] == ele) {
-            cout<<"found at index: " << min << endl;
+        int mid = low + (high - low) / 2;
+        if (arr[mid] == ele) {
+            cout<<"found at index: " << mid << endl;
             return 0;
         }
-        else if (arr[min] < ele) 
-        low = min+1;
+        else if (arr[mid] < ele) 
+        low = mid+1;
         else
-        high =min-1;
+        high =mid-1;
     }
     cout << "not found" << endl;
     return 0;
