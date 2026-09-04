@@ -51,5 +51,12 @@ int main() {
     }
     cout << endl;
     cout << "Greatest element is: " << greatest << endl;
+    //smallest element
+    int smallest = arr[0];
+    for (int i = 1; i < 5; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
     return 0;
 }
