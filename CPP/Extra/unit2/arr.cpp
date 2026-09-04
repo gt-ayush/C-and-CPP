@@ -41,5 +41,15 @@ int main() {
             cout << arr[i] << " ";
         }
     }
+
+    //greatest element
+    int greatest = arr[0];
+    for (int i = 1; i < 5; i++) {
+        if (arr[i] > greatest) {
+            greatest = arr[i];
+        }
+    }
+    cout << endl;
+    cout << "Greatest element is: " << greatest << endl;
     return 0;
 }
