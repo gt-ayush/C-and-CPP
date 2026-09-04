@@ -16,5 +16,9 @@ int main() {
         cout << arr1[i] << " ";
     }
     cout << endl;
+    cout << "Size of array is: " << sizeof(arr) / sizeof(arr[0]) << endl;
+    cout << "Size of array is: " << sizeof(arr1) / sizeof(arr1[0]) << endl;
+    cout << "Size of array is: " << sizeof(arr)  << endl;
+    cout << "Size of array is: " << sizeof(arr1) << endl;
     return 0;
 }
