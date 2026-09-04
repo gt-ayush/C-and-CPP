@@ -32,5 +32,13 @@ int main() {
             cout << arr[i] << " ";
         }
     }
+    //odd elements
+    cout << endl;
+    cout << "Odd elements are: ";
+    for (int i = 0; i < 5; i++) {
+        if (arr[i] % 2 != 0) {
+            cout << arr[i] << " ";
+        }
+    }
     return 0;
 }
