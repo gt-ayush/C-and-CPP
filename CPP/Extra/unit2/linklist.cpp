@@ -2,6 +2,7 @@
 using namespace std;
 //uni directional linklist in structure without using new keyword
 class List{
+public:
     int data;
     List *next;
     List(int val){
