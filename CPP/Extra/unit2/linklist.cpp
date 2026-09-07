@@ -20,8 +20,9 @@ int main(){
     n4.next = NULL;
 
     cout << "The linked list is: ";
-    while(&head != NULL){
-        cout << head.data << " ";
-        head = *head.next;
+    List *current = &head;
+    while(current != NULL){
+        cout << current->data << " ";
+        current = current->next;
     }
 }
