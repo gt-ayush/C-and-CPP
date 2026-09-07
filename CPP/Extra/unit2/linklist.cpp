@@ -9,7 +9,7 @@ public:
         data=val;
         next=NULL;
     }
-};
+}; 
 
 int main(){
     
