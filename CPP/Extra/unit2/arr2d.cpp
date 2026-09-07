@@ -28,5 +28,20 @@ int main () {
         }
         cout<<endl;
     }
-    return 0;
+
+    //a*a
+    int arr1[3][3]={};
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            arr1[i][j]=arr[i][j]*arr[j][i];
+        }
+        cout<<endl;
+    }
+    cout<<"------\n";
+        for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout<<arr1[j][i]<<" ";
+        }
+        cout<<endl;
+    }
 }
