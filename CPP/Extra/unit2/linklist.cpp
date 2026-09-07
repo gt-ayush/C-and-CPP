@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 //uni directional linklist in structure without using new keyword
-struct List{
+class List{
     int data;
     List *next;
     List(int val){
