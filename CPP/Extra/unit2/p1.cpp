@@ -46,14 +46,15 @@ class arrop{
         arr[15]=key;
         return 0;
     }
-    int remove(int key){ 
+    int remove(int key){ //all occurrences
+        int removed = 0;
         for(int i=0;i<16;i++){
             if(arr[i]==key){
                 arr[i]=0;
-                return 0;
+                removed = 1;
             }
         }
-        return -1;
+        return removed ? 0 : -1;
     }
     int multiply(int key){
         for(int i=0;i<16;i++){
@@ -85,7 +86,11 @@ int main(){
     a.display();
     cout<<"Enter key to remove: ";
     cin>>key;
-    a.remove(key);
+    if(a.remove(key)==0){
+        cout<<"Key removed successfully"<<endl;
+    }else{
+        cout<<"Key not found"<<endl;
+    }
     cout<<"Array after removal: ";
     a.display();
     cout<<"Enter key to multiply: ";
