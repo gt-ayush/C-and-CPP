@@ -1,84 +1,94 @@
 //create arr inside a class as a private member and perform all opration on that array.
-//opinter arthmatic 6 opration
-//five types of pointer
+
 
 #include <iostream>
+#include <algorithm>
+#include <cstddef>
+#include <vector>
 using namespace std;
 
 class arrop{
-    int arr[16]={1,2,3,4,5,6,4,6,3,8,3,7,3,7,2,9};
+    vector<int> arr{1,2,3,4,5,6,4,6,3,8,3,7,3,7,2,9};
     public:
     int sum(){
         int sum=0;
-        for(int i=0;i<16;i++){
-            sum+=arr[i];
+        for(int value:arr){
+            sum+=value;
         }
         return sum;
     }
     int resize(int newSize){
-        if(newSize>16){
-            cout<<"New size exceeds maximum limit of 16"<<endl;
+        if(newSize<0){
             return -1;
         }
+        arr.resize(static_cast<size_t>(newSize));
         return 0;
     }
     int sort(){
-        for(int i=0;i<16;i++){
-            for(int j=i+1;j<16;j++){
-                if(arr[i]>arr[j]){
-                    int temp=arr[i];
-                    arr[i]=arr[j];
-                    arr[j]=temp;
-                }
-            }
-        }
+        std::sort(arr.begin(),arr.end());
         return 0;
     }
     int display(){
-        for(int i=0;i<16;i++){
-            cout<<arr[i]<<" ";
+        for(int value:arr){
+            cout<<value<<" ";
         }
         cout<<endl;
         return 0;
     }
     int search(int key){
-        for(int i=0;i<16;i++){
-            if(arr[i]==key){
-                return i;
-            }
+        auto found=find(arr.begin(),arr.end(),key);
+        if(found!=arr.end()){
+            return static_cast<int>(found-arr.begin());
         }
         return -1;
     }
     int insert(int key){
-        arr[15]=key;
+        arr.push_back(key);
         return 0;
     }
-    int remove(int key){ //all occurrences and resize the array
-        int removed = 0;
-        for(int i=0;i<16;i++){
-            if(arr[i]==key){
-                arr[i]=0;
-                removed = 1;
-            }
+    int remove(int key){
+        auto newEnd=std::remove(arr.begin(),arr.end(),key);
+        if(newEnd==arr.end()){
+            return -1;
         }
-        if(removed){
-            // Shift elements to the left to fill the gap
-            for(int i=0;i<15;i++){
-                if(arr[i]==0){
-                    for(int j=i;j<15;j++){
-                        arr[j]=arr[j+1];
-                    }
-                    arr[15]=0; // Set the last element to 0 after shifting
-                }
-            }
-        }
-        return removed ? 0 : -1;
+        arr.erase(newEnd,arr.end());
+        return 0;
     }
     int multiply(int key){
-        for(int i=0;i<16;i++){
-            arr[i]*=key;
+        for(int &value:arr){
+            value*=key;
         }
         return 0;
+    }
+};
+//opinter arthmatic 6 opration
+//five types of pointer
+class ptr{
+    public:
+    static void demonstrate(){
+        int values[3]={10,20,30};
+        int *current=values;
+        int *next=current+1;
+        ptrdiff_t distance=next-current;
+
+        cout<<"Pointer arithmetic: "
+            <<*current<<" "
+            <<*(current+1)<<" "
+            <<*(next-1)<<" "
+            <<(next-current)<<" "
+            <<(current<next)<<" ";
+        ++current;
+        cout<<*current<<" (distance="<<distance<<")"<<endl;
+
+        const int *pointerToConst=values;
+        int *const constantPointer=values;
+        const int *const constantPointerToConst=values;
+        void *voidPointer=values;
+        cout<<"Pointer types: "
+            <<*pointerToConst<<" "
+            <<*constantPointer<<" "
+            <<*constantPointerToConst<<" "
+            <<static_cast<int *>(voidPointer)[0]<<endl;
     }
 };
 
@@ -99,8 +109,12 @@ int main(){
     }
     cout<<"Enter key to insert: ";
     cin>>key;
-    a.insert(key);
-    cout<<"Array after insertion: ";
+    if(a.insert(key)==0){
+        cout<<"Key inserted successfully"<<endl;
+    }else{
+        cout<<"Array is full; key was not inserted"<<endl;
+    }
+    cout<<"Array after insertion attempt: ";
     a.display();
     cout<<"Enter key to remove: ";
     cin>>key;
@@ -116,4 +130,5 @@ int main(){
     a.multiply(key);
     cout<<"Array after multiplication: ";
     a.display();
+    ptr::demonstrate();
 }
