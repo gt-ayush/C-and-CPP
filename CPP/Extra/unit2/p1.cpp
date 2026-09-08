@@ -15,6 +15,13 @@ class arrop{
         }
         return sum;
     }
+    int resize(int newSize){
+        if(newSize>16){
+            cout<<"New size exceeds maximum limit of 16"<<endl;
+            return -1;
+        }
+        return 0;
+    }
     int sort(){
         for(int i=0;i<16;i++){
             for(int j=i+1;j<16;j++){
@@ -46,12 +53,23 @@ class arrop{
         arr[15]=key;
         return 0;
     }
-    int remove(int key){ //all occurrences
+    int remove(int key){ //all occurrences and resize the array
         int removed = 0;
         for(int i=0;i<16;i++){
             if(arr[i]==key){
                 arr[i]=0;
                 removed = 1;
+            }
+        }
+        if(removed){
+            // Shift elements to the left to fill the gap
+            for(int i=0;i<15;i++){
+                if(arr[i]==0){
+                    for(int j=i;j<15;j++){
+                        arr[j]=arr[j+1];
+                    }
+                    arr[15]=0; // Set the last element to 0 after shifting
+                }
             }
         }
         return removed ? 0 : -1;
