@@ -40,10 +40,11 @@ class pr{
 
 int main() {
     pr obj;
+    pr *o=&obj;
     int values[10] = {0,1,2,3,4,5,6,7,8,9};
-    obj.set(values,10);
-    obj.sum();
-    obj.display();
-    obj.leanser(7);
+    (*o).set(values,10);
+    (*o).sum();
+    o->display();
+    o->leanser(7);
     return 0;
 }
