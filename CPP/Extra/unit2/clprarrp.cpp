@@ -19,7 +19,17 @@ class pr{
            s+=pp[i];                     
         }
     }
-    void display(){
+    void leanser(int elem){ 
+        for(int i=0;i<l;i++){
+            if(pp[i]==elem)
+            {
+                cout<<"Element "<<elem<<" found at index "<<i<<endl;
+                break;
+            }
+        }
+    }
+    void display()
+    {
        for(int i=0;i<l;i++){
             cout<<pp[i]<<" ";
         }
@@ -34,5 +44,6 @@ int main() {
     obj.set(values,10);
     obj.sum();
     obj.display();
+    obj.leanser(7);
     return 0;
 }
