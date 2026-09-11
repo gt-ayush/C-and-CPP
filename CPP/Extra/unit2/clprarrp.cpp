@@ -5,27 +5,25 @@ class pr{
     int p[10]={0};
     public:
     int *pp=p;
+    int s=0;
+    int l=0;
 
-    void set(int index, int value[]){
-        for(int i=0;i<10;i++){
-            if(i==index){
-                pp[i]=value[i];
+    void set(int value[],int len){
+        l=len;
+        for(int i=0;i<len;i++){
+            pp[i]=value[i];
             }
         }
-    }
-    int opr(){
-        for(int i=0;i<10;i++){
-            if(pp[i]!=0){
-                return pp[i];
-            }
+    void sum(){
+        for(int i=0;i<l;i++){
+           s+=pp[i];                     
         }
-        return 0;
     }
     void display(){
-       for(int i=0;i<10;i++){
+       for(int i=0;i<l;i++){
             cout<<pp[i]<<" ";
         }
-        cout<<endl;
+        cout<<"\nSum: "<<s<<endl;
     }
 
 };
@@ -33,9 +31,8 @@ class pr{
 int main() {
     pr obj;
     int values[10] = {0,1,2,3,4,5,6,7,8,9};
-    values[0] = 10;
-    obj.set(0, values);
-    cout << obj.opr() << endl;
+    obj.set(values,10);
+    obj.sum();
     obj.display();
     return 0;
 }
