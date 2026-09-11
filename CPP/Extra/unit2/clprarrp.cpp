@@ -41,9 +41,9 @@ class pr{
 int main() {
     pr obj;
     pr *o=&obj;
-    void (pr::*sth)(int*, int) = &pr::set;
+    void (pr::*sth)(int*,int)=&pr::set;
     int values[10] = {0,1,2,3,4,5,6,7,8,9};
-    (o->*sth)(values, 10);
+    (o->*sth)(values,10);
     (o->*(&pr::sum))();
     (o->*(&pr::display))();
     (o->*(&pr::leanser))(7);
