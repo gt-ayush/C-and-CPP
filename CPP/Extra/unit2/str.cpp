@@ -18,5 +18,6 @@ int main(){
     cout<<a.find_first_of("e")<<"\n";
     cout<<a.find_last_of("e")<<"\n";
     cout<<a.compare(b)<<"\n";
+    cout<<a.substr(1, 4)<<"\n";
 
 }
