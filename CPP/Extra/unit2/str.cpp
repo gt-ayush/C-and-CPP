@@ -8,5 +8,6 @@ int main(){
     b= "bye";
     string c("jay");
     cout<<a<<b<<c;
+    cout<<a+b;
 
 }
