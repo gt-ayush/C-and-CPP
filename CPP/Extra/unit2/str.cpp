@@ -23,4 +23,5 @@ int main(){
     cout<<a.substr(1, 4)<<"\n";
     cout<<a.size()<<"\n";
     cout<<a.length()<<"\n";
+    cout<<a.capacity()<<"\n";
 }
