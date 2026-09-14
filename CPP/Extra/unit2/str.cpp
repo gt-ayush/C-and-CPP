@@ -16,5 +16,6 @@ int main(){
     cout<<a.find("e")<<"\n";
     cout<<a.rfind("e")<<"\n";
     cout<<a.find_first_of("e")<<"\n";
+    cout<<a.find_last_of("e")<<"\n";
 
 }
