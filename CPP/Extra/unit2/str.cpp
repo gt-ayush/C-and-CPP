@@ -24,4 +24,10 @@ int main(){
     cout<<a.size()<<"\n";
     cout<<a.length()<<"\n";
     cout<<a.capacity()<<"\n";
+    getline(cin, a);
+    getline(cin, b);
+    getline(cin, c);
+    cout<<a<<"\n";
+    cout<<b<<"\n";
+    cout<<c<<"\n";
 }
