@@ -7,7 +7,9 @@ int main(){
     string b;
     b= "bye";
     string c("jay");
-    cout<<a<<b<<c;
-    cout<<a+b;
+    cout<<a<<b<<c<<"\n";
+    cout<<a+b<<"\n";
+    a.swap(b);
+    cout<<a<<" "<< b;
 
 }
