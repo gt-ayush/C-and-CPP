@@ -11,5 +11,7 @@ int main(){
     cout<<a+b<<"\n";
     a.swap(b);
     cout<<a<<" "<< b;
+    a.append(b);
+    cout<<a<<"\n"
 
 }
