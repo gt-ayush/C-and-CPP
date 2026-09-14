@@ -12,6 +12,7 @@ int main(){
     a.swap(b);
     cout<<a<<" "<< b;
     a.append(b);
-    cout<<a<<"\n"
+    cout<<a<<"\n";
+    cout<<a.find("e")<<"\n";
 
 }
