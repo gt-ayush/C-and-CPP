@@ -10,7 +10,7 @@ int main(){
     cout<<a<<b<<c<<"\n";
     cout<<a+b<<"\n";
     a.swap(b);
-    cout<<a<<" "<< b;
+    cout<<a<<" "<< b<<"\n";
     a.append(b);
     cout<<a<<"\n";
     cout<<a.find("e")<<"\n";
@@ -18,6 +18,7 @@ int main(){
     cout<<a.find_first_of("e")<<"\n";
     cout<<a.find_last_of("e")<<"\n";
     cout<<a.compare(b)<<"\n";
+    cout<<a.compare(2, 3, b,2, 3)<<"\n";
     cout<<a.substr(1, 4)<<"\n";
 
 }
