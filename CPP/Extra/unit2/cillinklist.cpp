@@ -49,9 +49,20 @@ void deleteAtPos(Node*&head,int pos){
 
 void insertAtPos(Node*&head,int value,int pos){
     Node *newNode = new Node(value);
+
+    if(head == NULL){
+        if(pos == 1){
+            head = newNode;
+            head->next = head;
+            head->prev = head;
+        } else {
+            delete newNode;
+        }
+        return;
+    }
     
     Node *temp = head;
-    for(int i=1;i<pos;i++){
+    for(int i=1;i<pos-1;i++){
         temp = temp->next;
     }
     
@@ -62,18 +73,22 @@ void insertAtPos(Node*&head,int value,int pos){
 }
 
 void display(Node* &head){
+    if(head == NULL) return;
+
     Node *temp = head;
-    while(temp!=NULL){
+    do{
         cout << temp->data<< " ";
         temp = temp->next;
-    }
+    } while(temp != head);
 }
 
 int main(){
     Node *head = NULL;
-    circlelinklist(head);
     insertAtPos(head, 5, 1);
-    deleteAtPos(head, 1);
-    //display(head);
-    cout << head->data;
+    insertAtPos(head, 10, 2);
+    insertAtPos(head, 15, 3);
+    insertAtPos(head, 20, 4);
+    circlelinklist(head);
+    deleteAtPos(head, 2);
+    display(head);
 }
