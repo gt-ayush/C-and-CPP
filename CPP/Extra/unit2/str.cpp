@@ -14,5 +14,6 @@ int main(){
     a.append(b);
     cout<<a<<"\n";
     cout<<a.find("e")<<"\n";
+    cout<<a.rfind("e")<<"\n";
 
 }
