@@ -21,5 +21,6 @@ int main(){
     cout<<a.compare(2, 3, b,2, 3)<<"\n";
     cout<<a.compare(0, 3, b, 0, 3)<<"\n";
     cout<<a.substr(1, 4)<<"\n";
+    cout<<a.size()<<"\n";
 
 }
