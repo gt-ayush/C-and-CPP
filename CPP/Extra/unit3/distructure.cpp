@@ -1,15 +1,24 @@
 #include <iostream>
 using namespace std;
+
 int i=0;
+
 class p{
+    int g=0;
     public:
+
+    p():g(8){
+            cout<<g<<endl;
+    }
+
     ~p(){
         i=10;
     }
+
 };
 
 int poo(){
-    i=3;
+
     p a;
     return i;
 }
