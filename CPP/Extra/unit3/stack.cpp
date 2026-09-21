@@ -4,13 +4,13 @@ using namespace std;
 class Stack {
     int top;
     int capacity;
-    int* stack; //it is for dynamic memory allocation
+    int* stack; // Dynamically allocated array that stores the stack elements.
 
 public:
     Stack(int size) {
         capacity = size;
         top = -1;
-        stack = new int[capacity];//it is for dynamic memory allocation and it is used to create an array of integers of size capacity
+        stack = new int[capacity]; // Allocate space for the requested number of elements.
     }
 
     void push(int value) {
@@ -62,7 +62,7 @@ int main() {
     s.pop();
     s.display();
     s.peek();
-    //increase the size of the stack
+    // Create a separate stack with a different capacity.
     int newSize;
     cin >> newSize;
     Stack s2(newSize);
