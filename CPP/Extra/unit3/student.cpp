@@ -17,7 +17,7 @@ class student{
     }
     void savedate(){
         ofstream fout;
-        fout.open("student.csv",ios::app);//iso::app is used to append the data in file if file already exists
+        fout.open("C:\\Users\\Ayush Kumar Gupta\\Desktop\\Repo\\C-and-CPP\\CPP\\Extra\\unit3\\student.csv",ios::app);//iso::app is used to append the data in file if file already exists
         fout<<roll<<","<<name<<",";
         for(int i=0;i<5;i++){
             fout<<marks[i]<<",";

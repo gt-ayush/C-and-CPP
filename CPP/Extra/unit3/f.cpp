@@ -5,10 +5,10 @@ int main  ()
 {
     ofstream fout;
     ifstream fin;
-    fout.open("sample.txt");
+    fout.open("C:\\Users\\Ayush Kumar Gupta\\Desktop\\Repo\\C-and-CPP\\CPP\\Extra\\unit3\\sample.txt");
     fout<<"Hello World";
     fout.close();
-    fin.open("sample.txt");
+    fin.open("C:\\Users\\Ayush Kumar Gupta\\Desktop\\Repo\\C-and-CPP\\CPP\\Extra\\unit3\\sample.txt");
     char c;
     while(fin)
     {
