@@ -6,7 +6,7 @@ int main  ()
     ofstream fout;
     ifstream fin;
     fout.open("sample.txt");
-    fout<<"Hello World\0";
+    fout<<"Hello World";
     fout.close();
     fin.open("sample.txt");
     char c;
