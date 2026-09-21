@@ -1,19 +1,16 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 class Stack {
     int top;
     int capacity;
-    vector<int> stack;
-    
+    int* stack; //it is for dynamic memory allocation
 
 public:
     Stack(int size) {
         capacity = size;
         top = -1;
-        stack.resize(capacity);
-        
+        stack = new int[capacity];//it is for dynamic memory allocation and it is used to create an array of integers of size capacity
     }
 
     void push(int value) {
@@ -56,5 +53,12 @@ int main() {
     s.display();
     s.pop();
     s.display();
+    //increase the size of the stack
+    int newSize;
+    cin >> newSize;
+    Stack s2(newSize);
+    s2.push(40);
+    s2.push(50);
+    s2.display();
 
 }
