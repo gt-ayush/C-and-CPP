@@ -29,8 +29,9 @@ class student{
 
 int main  ()  
 {
-    student s;
-    s.getdata();
-    s.savedate();
-  
+    student s[10]; // Assuming a maximum of 10 students
+    for(int i=0; i<10; i++){
+        s[i].getdata();
+        s[i].savedate();
+    }
 }
