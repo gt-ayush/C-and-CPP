@@ -12,7 +12,7 @@ public:
         top = -1;
         stack = new int[capacity]; // Allocate space for the requested number of elements.
     }
-
+            
     void push(int value) {
         if (top < capacity - 1) {
             top++;
@@ -22,11 +22,13 @@ public:
         }
     }
 
-    void pop() {
+    int pop() {
         if (top >= 0) {
             top--;
+            return stack[top + 1];
         } else {
             cout << "Stack Underflow" << endl;
+            return -1; // Return an invalid value to indicate an error
         }
     }
 
@@ -59,16 +61,20 @@ int main() {
     s.push(20);
     s.push(30);
     s.display();
-    s.pop();
+    int poppedValue = s.pop();
+    cout << "Popped value: " << poppedValue << endl;
     s.display();
     s.peek();
-    // Create a separate stack with a different capacity.
-    int newSize;
-    cin >> newSize;
-    Stack s2(newSize);
-    s2.push(40);
-    s2.push(50);
+    // Create a separate stack with a same capacity. and add thst element to the next stack and display the elements of the next stack.
+    Stack s2(n);
+    //using pop only
+    while (true) {
+        int value = s.pop();
+        if (value == -1) {
+            break; // Stop if stack is empty
+        }
+        s2.push(value);
+    }
     s2.display();
-    s2.peek();
 
 }
