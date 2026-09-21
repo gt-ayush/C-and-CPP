@@ -30,6 +30,14 @@ public:
         }
     }
 
+    void peek() {
+        if (top >= 0) {
+            cout << "Top element: " << stack[top] << endl;
+        } else {
+            cout << "Stack is empty" << endl;
+        }
+    }
+
     void display() {
         if (top >= 0) {
             cout << "Stack elements: ";
@@ -53,6 +61,7 @@ int main() {
     s.display();
     s.pop();
     s.display();
+    s.peek();
     //increase the size of the stack
     int newSize;
     cin >> newSize;
@@ -60,5 +69,6 @@ int main() {
     s2.push(40);
     s2.push(50);
     s2.display();
+    s2.peek();
 
 }
