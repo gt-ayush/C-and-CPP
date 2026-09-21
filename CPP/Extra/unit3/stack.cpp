@@ -41,7 +41,7 @@ public:
     void display() {
         if (top >= 0) {
             cout << "Stack elements: ";
-            for (int i = 0; i <= top; i++) {
+            for (int i = top; i >= 0; i--) {
                 cout << stack[i] << " ";
             }
             cout << endl;
