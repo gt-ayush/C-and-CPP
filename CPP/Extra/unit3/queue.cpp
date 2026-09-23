@@ -31,14 +31,14 @@ class Queue{
 
         void dequeue(){  // Remove an element from the front of the queue
             if(front == nullptr){
-                cout << "Queue is empty" << endl;
+                cout << "Queue is empty | Underflow" << endl;
                 return;
             }
             Node *temp = front;
             front = front->next;
             delete temp;
 
-            if(front == nullptr){
+            if(front == nullptr){ // If the queue becomes empty after dequeue, set rear to nullptr
                 rear = nullptr;
             }
         }
