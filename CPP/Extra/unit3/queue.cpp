@@ -10,12 +10,14 @@ class Node{
 class Queue{
     Node *front;
     Node *rear;
+    int count;
     public:
         Queue(){
             front = nullptr;
             rear = nullptr;
+            count = 0;
         }
-        void enqueue(int value){  // Add an element to the end of the queue
+        void enqueue(int value){  
             Node *newNode = new Node();
             newNode->data = value;
             newNode->next = nullptr;
@@ -27,9 +29,10 @@ class Queue{
                 rear->next = newNode;
                 rear = newNode;
             }
+            count++;
         }
 
-        void dequeue(){  // Remove an element from the front of the queue
+        void dequeue(){  
             if(front == nullptr){
                 cout << "Queue is empty | Underflow" << endl;
                 return;
@@ -37,14 +40,16 @@ class Queue{
             Node *temp = front;
             front = front->next;
             delete temp;
+            count--;
 
-            if(front == nullptr){ // If the queue becomes empty after dequeue, set rear to nullptr
+            if(front == nullptr){ 
                 rear = nullptr;
             }
         }
 
         void display(){
             Node *temp = front;
+            cout<<"Queue Size: "<<count<<"\nQueue elements: ";
             while(temp != nullptr){
                 cout << temp->data << " ";
                 temp = temp->next;
