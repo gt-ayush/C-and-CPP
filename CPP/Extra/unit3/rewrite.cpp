@@ -33,6 +33,7 @@ class table{
         while(getline(fin,line)){
             fout<<line<<endl;
         }
+        cout<<"Table has been copied to table1.txt"<<endl;
         fin.close();
         fout.close();
     }
