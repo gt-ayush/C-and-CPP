@@ -13,10 +13,12 @@ class student{
 
     void getdata(){
         cout<<"Enter name and roll no."<<endl;
-        cin>>ws; //ws is used to ignore leading whitespace characters in the input stream before reading the name. This ensures that if there are any spaces or newlines before the actual name input, they will be skipped, allowing for accurate reading of the name.
+        cin>>ws;
+         //ws is used to ignore leading whitespace characters in the input stream before reading the name. This ensures that if there are any spaces or newlines before the actual name input, they will be skipped, allowing for accurate reading of the name.
         getline(cin, name);
         cin>>rollno;
-        cin.ignore();//cin.ignore() is used to ignore the newline character left in the input stream after reading the roll number. This prevents any issues when reading subsequent input, especially if you plan to read more lines or strings after this.
+        cin.ignore();
+        //cin.ignore() is used to ignore the newline character left in the input stream after reading the roll number. This prevents any issues when reading subsequent input, especially if you plan to read more lines or strings after this.
     }
 
     void storedata(){
