@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// oprator overloading is a feature in C++ that allows you to redefine the behavior of operators for user-defined types (classes). This enables you to use operators like +, -, *, /, etc., with objects of your own classes, making the code more intuitive and readable.
+
 
 class Complex {
     private:
@@ -15,7 +15,7 @@ class Complex {
 
 Complex::Complex(double r, double i) : real(r), imag(i) {}
 
-Complex Complex::operator+(const Complex& other) { //why two times complex is used because the operator+ function returns a new Complex object that represents the sum of the two Complex numbers. The first Complex is the return type, indicating that the function will return a Complex object. The second Complex is the name of the class to which the operator+ function belongs, allowing us to access its members (real and imag) and perform the addition operation.
+Complex Complex::operator+(const Complex& other) {
     return Complex(real + other.real, imag + other.imag);
 }
 
