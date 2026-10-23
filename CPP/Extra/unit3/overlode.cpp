@@ -25,7 +25,7 @@ void Complex::display() {
 
 int main() {
     Complex c1(3.5, 2.5);
-    Complex c2(1.5, 4.5);
+    Complex c2(1.5, 4.5);  
     Complex c3 = c1 + c2; // Using overloaded + operator
     c3.display(); // Output: 5 + 7i
     return 0;
