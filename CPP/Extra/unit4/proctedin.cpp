@@ -1,4 +1,4 @@
-//public mode inheritance
+//protected mode inheritance
 #include <iostream>
 using namespace std;
 
@@ -9,17 +9,21 @@ public:
     }
 };
 
-class Derived : public Base {
+class Derived : protected Base {
 public:
     void display() {
         cout << "This is the derived class." << endl;
+    }
+
+    void displayBase() {
+        Base::display();
     }
 };
 
 int main() {
     Derived d;
-    d.display(); // Calls the derived class's display function
-    d.Base::display(); // Calls the base class's display function
+    d.display(); 
+    d.displayBase();
 
     return 0;
 
