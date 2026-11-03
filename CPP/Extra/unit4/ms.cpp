@@ -40,13 +40,16 @@ void mergesort(int arr[],int low,int high){
 }
 
 int main() {
-    int n;cin>>n;
+    int n;
+    cout<<"Enter the number of elements in the array: ";
+    cin>>n;
     int arr[n];
     for(int i=0;i<n;i++){
+        cout<<"Enter element ["<<i+1<<"]: ";
         cin>>arr[i];
     }
     mergesort(arr,0,n-1);
-
+    cout<<"Sorted array: ";
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
