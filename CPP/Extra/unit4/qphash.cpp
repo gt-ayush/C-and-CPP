@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 //change the code to qudratic probing from lear probing
-#define size 10
+#define size 30
 
 int table[size];
 
