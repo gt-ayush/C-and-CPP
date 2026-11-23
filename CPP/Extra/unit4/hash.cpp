@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define size 100
+#define size 10
 
 int table[size];
 
