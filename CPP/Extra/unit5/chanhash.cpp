@@ -13,7 +13,11 @@ public:
     }
 };
 
-void hashFunction(Node** table, int key, int size) {
+void hashFunction(int key, int size) {
+    int index = key % size;
+}
+
+void insert(Node** table, int key, int size) {
     int index = key % size;
     Node* newNode = new Node(key);
     if (table[index] == nullptr) {
@@ -26,9 +30,26 @@ void hashFunction(Node** table, int key, int size) {
         temp->next = newNode;
     }
 }
+void deleteKey(Node** table, int key, int size) {
+    int index = key % size;
+    Node* temp = table[index];
+    Node* prev = nullptr;
 
-void insert(Node** table, int key, int size) {
-    hashFunction(table, key, size);
+    while (temp != nullptr) {
+        if (temp->data == key) {
+            if (prev == nullptr) {
+                table[index] = temp->next;
+            } else {
+                prev->next = temp->next;
+            }
+            delete temp;
+            cout << "Key " << key << " deleted from index " << index << endl;
+            return;
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+    cout << "Key " << key << " not found in the hash table." << endl;
 }
 
 void search(Node** table, int key, int size) {
@@ -58,7 +79,7 @@ int main() {
 
     search(table, 20, size);
     search(table, 50, size);
-
+    deleteKey(table, 30, size);
     // Clean up memory
     for (int i = 0; i < size; i++) {
         Node* temp = table[i];
