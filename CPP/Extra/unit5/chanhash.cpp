@@ -64,6 +64,18 @@ void search(Node** table, int key, int size) {
     }
     cout << "Key " << key << " not found in the hash table." << endl;
 }
+void display(Node** table, int size) {
+    cout << "Hash Table: " << endl;
+    for (int i = 0; i < size; i++) {
+        cout << "Index " << i << ": ";
+        Node* temp = table[i];
+        while (temp != nullptr) {
+            cout << temp->data << " -> ";
+            temp = temp->next;
+        }
+        cout << "nullptr" << endl;
+    }
+}
 
 int main() {
     const int size = 10;
@@ -80,6 +92,7 @@ int main() {
     search(table, 20, size);
     search(table, 50, size);
     deleteKey(table, 30, size);
+    display(table, size);
     // Clean up memory
     for (int i = 0; i < size; i++) {
         Node* temp = table[i];
